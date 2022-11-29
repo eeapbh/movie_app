@@ -2,7 +2,7 @@ name: React Build
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -16,4 +16,4 @@ jobs:
 
       -name: Build
         run: npm run build
-        
+
