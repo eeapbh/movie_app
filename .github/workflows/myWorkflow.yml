@@ -1,13 +1,19 @@
-name: my workflow
-on: [push]
+name: React Build
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
-    name: hello github action
     runs-on: ubuntu-18.04
     steps:
-      - name: checout source code
+      - name: Checkout source code
         uses: actions/checkout@master
 
-      - name: echo hello
-        run: echo "Hello"
+      - name: Install Dependencies
+        run: npm Install
+
+      -name: Build
+        run: npm run build
+        
